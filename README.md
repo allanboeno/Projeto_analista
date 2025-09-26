@@ -43,3 +43,7 @@ Após estruturar as tabelas na camada **Refined**, adicionei **chaves primárias
 
 - **Chaves Estrangeiras:**  
   Todas as dimensões (`dim_country`, `dim_genre`, `dim_actor`, `dim_director`, `dim_date`) estão relacionadas à tabela fato através do `show_id`, garantindo **integridade referencial** e evitando registros órfãos.
+
+### Diagrama
+
+![diagrama](diagrama.png)
