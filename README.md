@@ -16,11 +16,11 @@ Na camada **Trusted**, os dados passam por um processo de **limpeza e padroniza�
 - **Padronização de colunas** → nomes em minúsculo e com `_` no lugar de espaços.  
 - **Datas organizadas** → `date_added` convertido para tipo `datetime`, corrigindo formatos inconsistentes.  
 - **Tratamento de duração** → separação da coluna `duration` em `duration_value` e `duration_unit`.  
-- **Strings normalizadas** → remoção de espaços extras, valores vazios transformados em `NULL`.  
+- **Strings normalizadas** → remoção de espaços extras e valores vazios transformados em `NULL` para manter integridade da camada de consulta.  
 - **Colunas categóricas ajustadas** → `type`, `rating` e `listed_in` padronizados para minúsculo.  
-- **Ratings validados** → valores inconsistentes como "88 min" foram removidos, os valores vazios viram `not_rated`.  
+- **Ratings validados** → valores inconsistentes como "88 min" foram removidos, os valores vazios viram `not_rated` apenas para análises futuras (na camada Refined).  
 
-➡️ O objetivo dessa camada é fornecer uma base **limpa, organizada e confiável**, pronta para análises mais avançadas na **Refined**. 
+➡️ O objetivo dessa camada é fornecer uma base **limpa, organizada e confiável**, pronta para análises mais avançadas na **Refined**, mantendo os campos nulos para consulta e rastreabilidade.
 
 ### 📊 Python REFINED  
 Na camada **Refined**, os dados da Trusted são organizados em um **modelo dimensional** (fato e dimensões), estruturados para facilitar análises no Power BI ou outras ferramentas:  
