@@ -65,7 +65,7 @@
   - Mês com maior taxa de lançamento  
 - Utilização de **cards dinâmicos**, com títulos que mudam conforme filtros aplicados  
 
-**Print do gráfico filtrado:**  
+**Print das KPIs:**  
 ![Inserir print dos KPIs](kpi.png)
 
 ---
